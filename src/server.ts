@@ -1,4 +1,3 @@
-// src/server.ts
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -20,15 +19,15 @@ app.use(cors({
     'http://localhost:4173',
     'https://telex.im',
     'https://*.telex.im',
-    process.env.FRONTEND_URL // Allow environment-specific frontend
+    process.env.FRONTEND_URL 
   ].filter(Boolean),
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   credentials: true
 }));
 
-// Handle preflight requests
-app.options('*', cors());
+// Handle preflight requests — changed '*' to '/*' to avoid path-to-regexp error
+app.options('/*', cors());
 
 app.use(express.json());
 
