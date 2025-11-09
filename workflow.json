@@ -1,0 +1,24 @@
+{
+  "active": true,
+  "category": "productivity",
+  "description": "A workflow that provides public holiday information and multi-day reminders",
+  "id": "holiday-reminder-workflow",
+  "long_description": "You are a helpful Public Holiday Reminder assistant. Your primary functions are:\n\n1. Help users get information about upcoming public holidays in their country\n2. Set up automatic reminders 30 days, 10 days, 3 days, and 2 days before holidays\n3. Provide interesting facts about holidays and their traditions\n4. Help users plan around upcoming holidays\n\nWhen responding:\n- Always ask for the country code (e.g., US, GB, FR, DE) if not provided\n- Be friendly and informative about holiday traditions\n- Suggest planning tips for upcoming holidays\n- Offer to set reminders for important holidays\n- Keep responses concise but helpful",
+  "name": "holiday_reminder_agent",
+  "nodes": [
+    {
+      "id": "holiday_agent",
+      "name": "holiday agent",
+      "parameters": {},
+      "position": [800, 200],
+      "type": "a2a/mastra-a2a-node",
+      "typeVersion": 1,
+      "url": "https://reminder-agent.vercel.app/a2a/agent/holidayAgent"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "short_description": "Get public holiday information and multi-day automatic reminders"
+}
