@@ -1,19 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "src/server.ts",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/src/server.ts"
+      "dest": "/dist/server.js"
     }
   ],
   "functions": {
-    "src/server.ts": {
+    "dist/server.js": {
+      "runtime": "nodejs18.x",
       "maxDuration": 30
     }
   }
