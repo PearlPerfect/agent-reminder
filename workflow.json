@@ -13,7 +13,7 @@
       "position": [800, 200],
       "type": "a2a/mastra-a2a-node",
       "typeVersion": 1,
-      "url": "https://reminder-agent.vercel.app/a2a/agent/holidayAgent"
+      "url": "https://agent-reminder.vercel.app/a2a/agent/holidayAgent"
     }
   ],
   "pinData": {},
